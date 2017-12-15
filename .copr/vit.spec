@@ -31,7 +31,7 @@ Features:
 %autosetup -n %{name}-%{version}
 
 %build
-%configure
+%configure PERL=/usr/bin/perl
 make %{?_smp_mflags}
 
 
