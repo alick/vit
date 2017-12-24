@@ -14,6 +14,8 @@ URL:            https://tasktools.org/projects/vit.html
 
 # Obtain the tarball for a certain branch via:
 Source0:        https://github.com/alick/vit/archive/%{branch}.tar.gz#/%{name}-%{version}-%{release}.tar.gz
+Patch0:         configure.patch
+Patch1:         %{name}.pl.patch
 
 BuildArch:      noarch
 BuildRequires:  task perl(Curses) perl(Time::HiRes)
@@ -29,9 +31,11 @@ Features:
 
 %prep
 %autosetup -n %{name}-%{version}
+%patch0 -p1 -b .default
+%patch1 -p1 -b .default
 
 %build
-%configure PERL=/usr/bin/perl
+%configure
 make %{?_smp_mflags}
 
 
@@ -48,6 +52,9 @@ make %{?_smp_mflags}
 
 
 %changelog
+* Wed Dec 23 2017 Alick Zhao <alick AT fedoraproject DOT org> 1.3.dev-20171223
+- Update to latest HEAD and use Macports patches
+
 * Wed Nov 08 2017 Alick Zhao <alick AT fedoraproject DOT org> 1.3.dev-20171108
 - Update spec file for automatically building the 1.3 branch on Copr
 
