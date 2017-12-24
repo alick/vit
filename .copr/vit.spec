@@ -52,7 +52,7 @@ make %{?_smp_mflags}
 
 
 %changelog
-* Wed Dec 23 2017 Alick Zhao <alick AT fedoraproject DOT org> 1.3.dev-20171223
+* Sat Dec 23 2017 Alick Zhao <alick AT fedoraproject DOT org> 1.3.dev-20171223
 - Update to latest HEAD and use Macports patches
 
 * Wed Nov 08 2017 Alick Zhao <alick AT fedoraproject DOT org> 1.3.dev-20171108
