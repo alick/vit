@@ -1,7 +1,7 @@
 %global name vit
 %global branch 1.3-copr
 %global version 1.3.dev
-%global build_date %{lua: print(os.date("%Y%m%d"))}
+%global build_date %(TZ=America/Chicago date +"%Y%m%d")
 
 Name:           %{name}
 Version:        %{version}
