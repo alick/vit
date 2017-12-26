@@ -1,5 +1,4 @@
 %global name vit
-%global branch 1.3-copr
 %global version 1.3.dev
 %global build_date %(TZ=America/Chicago date +"%Y%m%d")
 
@@ -12,7 +11,6 @@ Summary:        A minimalist Taskwarrior full-screen terminal interface with Vim
 License:        GPLv3+
 URL:            https://tasktools.org/projects/vit.html
 
-# Obtain the tarball for a certain branch via:
 Source0:        %{name}-%{version}-%{release}.tar.gz
 
 BuildArch:      noarch
